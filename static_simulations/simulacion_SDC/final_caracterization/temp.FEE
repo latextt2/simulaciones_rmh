@@ -1,0 +1,76 @@
+[Format]      =  1
+[Precision]   =  9.9999999999999998e-013
+[MinAngle]    =  30
+[Depth]       =  1
+[LengthUnits] =  millimeters
+[ProblemType] =  axisymmetric
+[Coordinates] =  cartesian
+[Comment]     =  "Add comments here."
+[PointProps]   = 0
+[BdryProps]   = 0
+[BlockProps]  = 2
+  <BeginBlock>
+    <BlockName> = "air"
+    <ex> = 1
+    <ey> = 1
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "dielectric"
+    <ex> = 10
+    <ey> = 10
+    <qv> = 0
+  <EndBlock>
+[ConductorProps]  = 3
+  <BeginConductor>
+    <ConductorName> = "sensor"
+    <Vc> = 1
+    <qc> = 0
+    <ConductorType> = 1
+  <EndConductor>
+  <BeginConductor>
+    <ConductorName> = "guard"
+    <Vc> = 1
+    <qc> = 0
+    <ConductorType> = 1
+  <EndConductor>
+  <BeginConductor>
+    <ConductorName> = "ground"
+    <Vc> = 0
+    <qc> = 0
+    <ConductorType> = 1
+  <EndConductor>
+[NumPoints] = 14
+0	0	0	0	0
+4.4000000000000004	0	0	2	0
+4.9000000000000004	0	0	2	0
+10	0	0	0	0
+6.4000000000000004	0	0	2	0
+5.9000000000000004	0	0	2	0
+0	0.84999999999999998	0	3	0
+0	-6	0	0	0
+0	11.35	0	3	0
+0	19	0	0	0
+17.5	19	0	0	0
+10	11.35	0	3	0
+17.5	-6	0	0	0
+10	2.1201665379258299	0	3	0
+[NumSegments] = 12
+3	4	-1	0	0	0	3
+5	2	-1	0	0	2	2
+1	0	-1	0	0	0	1
+7	0	-1	0	0	0	0
+0	6	-1	0	0	0	0
+9	8	-1	0	0	0	0
+8	6	-1	0	0	1	0
+11	8	-1	0	0	1	0
+9	10	-1	0	0	0	0
+7	12	-1	0	0	0	0
+10	12	-1	0	0	0	0
+11	13	-1	0	0	1	0
+[NumArcSegments] = 1
+6	13	14.477512185929925	1	0	0	0	0
+[NumHoles] = 0
+[NumBlockLabels] = 2
+4.25	5	2	0.1721702882348331	1	0
+17	12.5	1	0.1721702882348331	0	0
