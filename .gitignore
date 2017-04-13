@@ -1,0 +1,7 @@
+/**/_sfprj/**/*.mat
+/**/slprj/**
+*.swp
+*.mat
+*.res
+*.svg
+*.png
