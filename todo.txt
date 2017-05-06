@@ -1,0 +1,31 @@
+?script guardar imagenes femm desde matlab
+?actualizar datos de curva BH del material
+
+simulacion_eir_simple
+	implementar script para calculo de iman radial
+	actualizar modelo cad en femm
+	simulacion de fuerza y saturacion en las codiciones de interes
+
+simulacion_eia_simple
+	implementar script para calculo de iman axial
+	actualizar modelo cad en femm
+	simulacion de fuerza y saturacion en las codiciones de interes
+
+simulacion_eia_avanzada
+	separar calculo reluctancia 3d a una sola funcion
+	refactorizar scrip femm a deplazamientos absolutos
+	actualizar cad fem
+	implenetar script de graficas
+
+simulacion_eir_avanzada
+	implementar funcion de reluctancia 3d  para el radia 
+	implementar script para simulacion de barrido
+	actualizar cad fem
+	implemetar script de graficas
+
+simulacion_ip
+	implementar script formula libro
+	atualizar modelo 3d
+	plotear formula contra simulacion fem
+	actualizar cad fem
+	actulizar parametros matlab para 0.5mm
