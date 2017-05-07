@@ -1,7 +1,6 @@
-%%
-clear all
-clc
-load('datos_reales.mat')
+%%clear all
+clc;
+clear all;
 %% simulacion
 samples = 10000;
 y_o = 0.5e-3;
@@ -13,6 +12,8 @@ r3 = 33e-3;
 h1 = 20e-3;
 h2 = 12e-4;
 NI = 1;
+F_max = 9.8;
+y_max = 2e-3;
 %% constantes
 u_0 = 4*pi*1e-7;
 y = linspace(y_o,y_f,samples);
@@ -37,6 +38,5 @@ flux = NI./reluctance;
 r_inv = 1./reluctance;
 dr_inv_dy = -diff(r_inv)./diff(y);
 %%
-selected_y = 2e-3;
-[M,I] = min((y-selected_y).^2);
-NI_max = sqrt((2*9.8)/dr_inv_dy(I))
+[M,I] = min((y-y_max).^2);
+NI_max = sqrt((2*F_max)/dr_inv_dy(I))
