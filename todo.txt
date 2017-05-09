@@ -13,9 +13,7 @@ simulacion_eia_simple
 
 simulacion_eia_avanzada
 	separar calculo reluctancia 3d a una sola funcion
-	refactorizar scrip femm a deplazamientos absolutos
 	actualizar cad fem
-	implenetar script de graficas
 
 simulacion_eir_avanzada
 	implementar funcion de reluctancia 3d  para el radia 

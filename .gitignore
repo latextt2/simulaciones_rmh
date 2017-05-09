@@ -9,3 +9,4 @@
 *.docx
 **/temp_file.FEM
 **.asv
+**spike.m

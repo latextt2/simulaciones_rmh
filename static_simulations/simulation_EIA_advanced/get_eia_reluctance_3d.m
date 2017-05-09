@@ -1,20 +1,14 @@
-%%
-clear all
-load('datos_reales.mat')
-%% simulacion
-samples = 10000;
-y_o = 0.5e-3;
-y_f = 3e-3;
+function [ reluctance, flux, dw_dy] = get_eia_reluctance_3d(y, core, NI)
+%UNTITLED3 Summary of this function goes here
+%   Detailed explanation goes here
 %% configuracion
-r1 = 18e-3;
-r2 = 28e-3;
-r3 = 33e-3;
-h1 = 20e-3;
-h2 = 12e-4;
-NI = 1;
+r1 = core.r1;
+r2 = core.r2;
+r3 = core.r3;
+h1 = core.h1;
+h2 = core.h2;
 %% constantes
 u_0 = 4*pi*1e-7;
-y = linspace(y_o,y_f,samples);
 %% calculo de reluctancia
 rg11 = y/((r1/2)*u_0);
 rg12 = r_basic(r1,y,h1);
@@ -35,15 +29,4 @@ reluctance = rg1 + rg2;
 flux = NI./reluctance;
 energy = (1/2)*((NI)^2)./reluctance;
 dw_dy = -diff(energy)./diff(y);
-%%
-subplot(2,1,1)
-plot(y(2:end),dw_dy,'r',y_real/1000,f_real,'g')
-subplot(2,1,2)
-reluctance_ideal = r_cilindrical(0,r1,y)+r_cilindrical(r2,r3,y);
-reluctance_aprox = r_cilindrical(0,r1+y,y)+r_cilindrical(r2-y,r3+y,y);
-plot(y,reluctance,'r',y,reluctance_ideal,'b',y,reluctance_aprox,'g');
-%%
-selected_y = 2e-3; 
-[M,I] = min((y-2e-3).^2);
-dw_dy(I)
-reluctance(I)
+end
