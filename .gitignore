@@ -7,3 +7,5 @@
 *.png
 *.ans
 *.docx
+**/temp_file.FEM
+**.asv
