@@ -24,10 +24,13 @@ plot(y_calc(2:end), force_3d, y_calc(2:end), force_ideal, y_calc(2:end), force_a
 ylabel('Force [N]');
 xlabel('Distance [m]');
 title('EIA Force');
+legend('3D','Ideal','Simple aproximation','FEM','Location','southwest');
 grid on
+
 subplot(2,1,2)
 plot(y_calc, r_3d, 'r', y_calc, r_ideal, 'b', y_calc, r_aprox, 'g');
 ylabel('Reluctance [A/Wb]');
 xlabel('Distance [m]');
 title('EIA Reluctance');
+legend('3D','Ideal','Simple aproximation','Location','southwest');
 grid on
