@@ -14,6 +14,13 @@ end
 
 closefemm();
 %%
+save('simulation_data','c_1','c_0','d_i')
+%%
+load('simulation_data')
 delta_c = c_1 - c_0;
-plot(d_i,-delta_c)
 d_i_optimum = d_i(find(max(-delta_c)==-delta_c))
+%%
+plot(d_i,-delta_c)
+ylabel('\DeltaC [F]')
+xlabel('d_i [mm]')
+grid on
