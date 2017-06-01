@@ -8,5 +8,6 @@
 *.ans
 *.docx
 **/temp_file.FEM
+**/temp.FEE
 **.asv
 **spike.m
