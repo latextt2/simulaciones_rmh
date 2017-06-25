@@ -3,7 +3,7 @@ clear all;
 
 n_samples = 21;
 yi = 0.5;
-yf = 2;
+yf = 2.0;
 y = linspace(yi,yf,n_samples);
 f = [];
 
