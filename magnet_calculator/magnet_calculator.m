@@ -3,7 +3,7 @@ clear all
 %% Constantes universales
 u_0 = 4*pi*1e-7;
 %% Datos del collarin
-u_cr = 950;
+u_cr = 1600;
 l_c = 80e-3;
 %% Datos del nucleo electroiman
 u_er = 950;
