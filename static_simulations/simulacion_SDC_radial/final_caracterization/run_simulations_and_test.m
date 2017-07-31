@@ -1,23 +1,26 @@
 clc
 clear all
 %%
-d_i = 4.4;
-y_i = 0.15;
-y_f = 0.85;
-y_d = 0.025;
+R = 92;%objective radius
+r = 10;%sensor outer radius
+d_i = 5; %inner plate diameter
+y_0 = 0.1; % minimum distance
+y_1 = 1.0; % maximum distance
+y_d = 0.025 % distance resolution
+curvature = r/R; % R/r diameter
+%%
 openfemm();
-
-y = y_i:y_d:y_f;
+y = y_0:y_d:y_1;
 capacitance = [];
 
 for y_loop = y;
-capacitance = [capacitance cds_calc(y_loop,d_i,0.25)];
+capacitance = [capacitance cds_calc(y_loop,d_i,curvature)];
 end
 
 closefemm();
 %%
 plot(y,capacitance);
-ylabel('C [pF]')
+ylabel('C [F]')
 xlabel('D [mm]')
 grid on
 save('simulation_results','y','capacitance');
