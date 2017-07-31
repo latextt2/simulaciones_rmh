@@ -52,3 +52,4 @@ r_R = [0 r_R]
 closefemm();
 %%
 plot(r_R,capacitance/max(capacitance))
+save('simulation_results','r_R','capacitance')
