@@ -17,7 +17,7 @@ end
 closefemm();
 %%
 plot(y,capacitance);
-ylabel('Capacitancia [pF]')
-xlabel('Desplazamiento [mm]')
+ylabel('C [pF]')
+xlabel('D [mm]')
 grid on
-save('simulation_data','y','capacitance');
+save('simulation_results','y','capacitance');
