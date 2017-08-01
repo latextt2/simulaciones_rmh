@@ -1,9 +1,10 @@
-function [m,R_r,R_a,I_p,I_0] = system_parameters()
+function [m,R_r,R_a,R_p,I_p,I_0] = system_parameters()
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 
 l_shaft = 0.40;
 l_radial_to_shaft = 0.130;
+l_mcce_to_shaft = 0.150;
 l_axial_to_shaft = 0.170;
 
 r_shaft = 12.5e-3;
@@ -16,6 +17,7 @@ I_0 = (1/12)*m_shaft*(3*(r_shaft^2) + (l_shaft^2));
 
 
 R_r = l_shaft + l_radial_to_shaft;
+R_p = l_shaft + l_mcce_to_shaft;
 R_a = l_shaft + l_axial_to_shaft;
 m = m_shaft;
 
