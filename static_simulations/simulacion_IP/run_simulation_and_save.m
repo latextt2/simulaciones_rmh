@@ -9,4 +9,5 @@ end
 closefemm
 %%
 y = 1e-3 * y;
-save('simulation_data','f','y');
+save('simulation_results','f','y');
+plot(y,f);
