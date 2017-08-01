@@ -1,7 +1,7 @@
 function [ f ] = get_force_at( y )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
-y_0 = 1.5;
+y_0 = 0.75;
 
 opendocument('IP_simulation_model.FEM');
 mi_saveas('temp_file.FEM');
