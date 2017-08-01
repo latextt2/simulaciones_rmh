@@ -10,7 +10,7 @@ tail  = 'end';
 
 fprintf(fileID,'%s\n',head); %% function header
 %%
-fprintf(fileID,'\n[m,R_r,R_a,I_p,I_0] = system_parameters();\n');
+fprintf(fileID,'\n[m,R_r,R_a,R_p,I_p,I_0] = system_parameters();\n');
 %% assign input variables
 fprintf(fileID,'\n');
 for r = 1:size(xp,1)
