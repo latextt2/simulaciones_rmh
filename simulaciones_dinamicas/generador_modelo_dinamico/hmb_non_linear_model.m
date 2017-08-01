@@ -1,6 +1,6 @@
 function [xp,y] = hmb_non_linear_model(x,u,ws,Fd_x,Fd_y,Fd_z,Md_y,Md_z,Fmcce1,Fmcce2)
 
-[m,R_r,R_a,R_p,I_p,I_0] = system_parameters();
+[m,R_r,R_a,I_p,I_0] = system_parameters();
 
 x1 = x(1);
 x2 = x(2);
