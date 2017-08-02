@@ -36,7 +36,7 @@ Kdo_lt(:,:,n) = Kdo;
 Kdi_lt(:,:,n) = Kdi;
 end
 
-ws = -15000;
+ws = -10000;
 [A,B,C] = get_linear_model(xp_nl,y_nl,ws);
 [K, Ko] = calc_linear_controller_gains(A,B,C,P,Po);
 Ki = calc_integral_controller_gains(A,B,C,Pi);
